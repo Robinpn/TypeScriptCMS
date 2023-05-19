@@ -8,10 +8,10 @@ type types = {
 const Navbar = (props: types): React.ReactElement => {
   return (
     <>
-      <nav className='navbar'>
-        <h2>Menu</h2>
+      <nav className="navbar">
+        <a href="">Menu</a>
         <h1>{props.Title}</h1>
-        <h2>Contact</h2>
+        <a href="">Contact</a>
       </nav>
     </>
   );
