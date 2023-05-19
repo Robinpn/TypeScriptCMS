@@ -2,4 +2,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  --Text-color: #060b14;
+  --Primary-button-color: #d8b47d;
+  --Secundary-button-color: #eff4fa;
+  --Accent-color: #B98537;
 }
