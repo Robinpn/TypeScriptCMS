@@ -41,11 +41,11 @@ function App() {
     console.log(data);
   }
 
-  return <>
-  {/* <Hero imgUrl={data.hero.heroImage.url}/> */}
-  {console.log(data.hero.heroImage.url)
-  }
-  </>;
+  return (
+    <>
+      <Hero imgUrl={data.hero.heroImage.url} />
+    </>
+  );
 }
 
 export default App;
