@@ -7,7 +7,7 @@ type HeroImage = {
 
 const Hero = (props: HeroImage): React.ReactElement => {
     return (
-        <img src={props.imgUrl} alt="hero image" />
+        <img className='hero-img' src={props.imgUrl} alt="hero image" />
     )
 }
 

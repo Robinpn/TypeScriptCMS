@@ -42,9 +42,7 @@ function App() {
   }
 
   return <>
-  {/* <Hero imgUrl={data.hero.heroImage.url}/> */}
-  {console.log(data.hero.heroImage.url)
-  }
+  <Hero imgUrl={data.hero.heroImage.url}/>
   </>;
 }
 
