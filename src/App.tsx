@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useQuery } from 'graphql-hooks';
 import './App.css';
 import Hero from './components/Hero/Hero';
+import Navbar from './components/Navbar/Navbar';
 
 const contentQuery: string = `
 query {
@@ -41,9 +42,14 @@ function App() {
     console.log(data);
   }
 
-  return <>
-  <Hero imgUrl={data.hero.heroImage.url}/>
-  </>;
+  return (
+    <>
+    <Navbar Title={data.hero.title} />
+      <main>
+        <Hero imgUrl={data.hero.heroImage.url} />
+      </main>
+    </>
+  );
 }
 
 export default App;
