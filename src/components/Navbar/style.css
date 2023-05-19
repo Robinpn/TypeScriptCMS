@@ -8,11 +8,11 @@
 .navbar > h1 {
   font-size: 48px;
   height: fit-content;
+  font-weight: normal;
 }
 .navbar > a {
   height: fit-content;
   align-self: flex-end;
   font-size: 32px;
   cursor: pointer;
-  
 }

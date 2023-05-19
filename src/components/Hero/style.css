@@ -1,5 +1,23 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .hero-img {
   width: 100%;
   height: 80vh;
   border-radius: 20px;
+}
+.arrow-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #d8b47d;
+  border-style: none;
+  border-radius: 100%;
+  margin-block: 8px;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
