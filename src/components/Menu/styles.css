@@ -1,0 +1,7 @@
+.pizza-section {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: aqua;
+}
