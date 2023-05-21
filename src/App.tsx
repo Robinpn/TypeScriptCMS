@@ -5,6 +5,7 @@ import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
 import Menu from './components/Menu/Menu';
 import Pizza from './components/Pizza/Pizza';
+import Footer from './components/Footer/Footer';
 
 const contentQuery: string = `
 query {
