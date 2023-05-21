@@ -3,6 +3,7 @@ import { useQuery } from 'graphql-hooks';
 import './App.css';
 import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 const contentQuery: string = `
 query {
@@ -48,6 +49,7 @@ function App() {
       <main>
         <Hero imgUrl={data.hero.heroImage.url} />
       </main>
+      <Footer apply={data.footer.apply} facebook={data.footer.facebook} instagram={data.footer.apply} />
     </>
   );
 }
