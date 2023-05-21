@@ -3,7 +3,8 @@ import { useQuery } from 'graphql-hooks';
 import './App.css';
 import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import Menu from './components/Menu/Menu';
+import Pizza from './components/Pizza/Pizza';
 
 const contentQuery: string = `
 query {
@@ -40,14 +41,29 @@ function App() {
     return <p>error...</p>;
   }
   if (data) {
-    console.log(data);
+    // console.log(data);
   }
 
-  return (
+  //fetch pizza array
+  const pizzaData: object[] = data.allPizzas;
+  //map all pizzas
+  const pizzaArr: any = pizzaData.map((pizza: any) => {
+    return pizza;
+  })
+
+  console.log(pizzaData);
+  
+  console.log(pizzaArr);
+  
+
+  return ( 
     <>
     <Navbar Title={data.hero.title} />
       <main>
         <Hero imgUrl={data.hero.heroImage.url} />
+        <Menu>
+          <Pizza items={pizzaArr} render={(item: any) => <div><p>{item.name}</p> <p>{item.id}</p></div>} />
+        </Menu>
       </main>
       <Footer apply={data.footer.apply} facebook={data.footer.facebook} instagram={data.footer.apply} />
     </>
