@@ -1,3 +1,8 @@
 main {
   padding-inline: 28px;
 }
+
+.pizza-img {
+  height: 200px;
+  width: 200px;
+}

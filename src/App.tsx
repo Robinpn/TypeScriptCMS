@@ -20,6 +20,9 @@ query {
     ingredientList {
       name
     }
+    image {
+      url
+    }
   }
   about{
     description
@@ -41,19 +44,29 @@ function App() {
     return <p>error...</p>;
   }
   if (data) {
-    // console.log(data);
+    console.log(data);
   }
 
   //fetch pizza array
   const pizzaData: object[] = data.allPizzas;
+  console.log(pizzaData);
+  // console.log(pizzaData);
+  
+  
   //map all pizzas
   const pizzaArr: any = pizzaData.map((pizza: any) => {
     return pizza;
   })
 
-  console.log(pizzaData);
+  // Fetch ingredients
+ 
   
-  console.log(pizzaArr);
+  
+  
+
+  // console.log(pizzaData);
+  
+  // console.log(pizzaArr);
   
 
   return ( 
@@ -62,7 +75,7 @@ function App() {
       <main>
         <Hero imgUrl={data.hero.heroImage.url} />
         <Menu>
-          <Pizza items={pizzaArr} render={(item: any) => <div><p>{item.name}</p> <p>{item.id}</p></div>} />
+          <Pizza items={pizzaArr} render={(item: any) => <div><p>{item.name}</p> <img className='pizza-img' src={item.image.url} alt="a fucking pizza" /></div>} />
         </Menu>
       </main>
     </>
