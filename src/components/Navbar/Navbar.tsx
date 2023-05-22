@@ -9,9 +9,9 @@ const Navbar = (props: types): React.ReactElement => {
   return (
     <>
       <nav className="navbar">
-        <a href="">Menu</a>
+        <a href="#menu">Menu</a>
         <h1>{props.Title}</h1>
-        <a href="">Contact</a>
+        <a href="#footer">Contact</a>
       </nav>
     </>
   );

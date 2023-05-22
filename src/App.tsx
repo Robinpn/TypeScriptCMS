@@ -5,6 +5,8 @@ import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
 import Menu from './components/Menu/Menu';
 import Pizza from './components/Pizza/Pizza';
+import Footer from './components/Footer/Footer';
+import About from './components/About/About';
 
 const contentQuery: string = `
 query {
@@ -56,7 +58,7 @@ function App() {
   //map all pizzas
   const pizzaArr: any = pizzaData.map((pizza: any) => {
     return pizza;
-  })
+  });
 
   // Fetch ingredients
  
@@ -69,15 +71,23 @@ function App() {
   // console.log(pizzaArr);
   
 
-  return ( 
+  console.log(pizzaArr);
+
+  return (
     <>
-    <Navbar Title={data.hero.title} />
+      <Navbar Title={data.hero.title} />
       <main>
         <Hero imgUrl={data.hero.heroImage.url} />
         <Menu>
           <Pizza items={pizzaArr} render={(item: any) => <div><p>{item.name}</p> <img className='pizza-img' src={item.image.url} alt="a fucking pizza" /></div>} />
         </Menu>
+        <About description={data.about.description} />
       </main>
+      <Footer
+        apply={data.footer.apply}
+        facebook={data.footer.facebook}
+        instagram={data.footer.apply}
+      />
     </>
   );
 }

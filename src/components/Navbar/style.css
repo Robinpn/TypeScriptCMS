@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 50px;
+  color: #060b14;
 }
 .navbar > h1 {
   font-size: 48px;
@@ -15,4 +16,5 @@
   align-self: flex-end;
   font-size: 32px;
   cursor: pointer;
+  color: #060b14;
 }
