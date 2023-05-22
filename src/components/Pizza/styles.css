@@ -1,5 +1,11 @@
 .pizza-container {
+  width: 100%;
+  height: fit-content;
+  background-color: red;
+  display: flex;
+}
+
+.pizza-img {
+  height: 200px;
   width: 200px;
-  height: auto;
-  margin: 0 auto;
 }

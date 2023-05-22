@@ -51,19 +51,13 @@ function App() {
 
   //fetch pizza array
   const pizzaData: object[] = data.allPizzas;
-  console.log(pizzaData);
+  // console.log(pizzaData);
   // console.log(pizzaData);
 
   //map all pizzas
   const pizzaArr: any = pizzaData.map((pizza: any) => {
     return pizza;
   });
-
-  // Fetch ingredients
-
-  // console.log(pizzaData);
-
-  // console.log(pizzaArr);
 
   console.log(pizzaArr);
 
@@ -76,14 +70,8 @@ function App() {
           <Pizza
             items={pizzaArr}
             render={(item: any) => (
-              <div>
+              <>
                 <p>{item.name}</p>{' '}
-                <img
-                  className="pizza-img"
-                  src={item.image.url}
-                  alt="a fucking pizza"
-                />
-                <p>
                   {item.ingredientList.map((ingred: any) => {
                     return (
                       <>
@@ -91,8 +79,12 @@ function App() {
                       </>
                     );
                   })}
-                </p>
-              </div>
+                   <img
+                  className="pizza-img"
+                  src={item.image.url}
+                  alt="a fucking pizza"
+                />
+              </>
             )}
           />
         </Menu>
