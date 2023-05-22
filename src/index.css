@@ -8,9 +8,10 @@
   --Secundary-button-color: #eff4fa;
   --Accent-color: #b98537;
   font-family: 'Roboto';
-
-  color: var(--Text-color);
 }
 a {
   text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
 }
