@@ -10,9 +10,9 @@ const Hero = (props: HeroImage): React.ReactElement => {
     <>
       <section className="hero">
         <img className="hero-img" src={props.imgUrl} alt="hero image" />
-        <button className="arrow-btn">
+        <a href='#menu' className="arrow-btn">
           <p>&#8595;</p>
-        </button>
+        </a>
       </section>
     </>
   );
