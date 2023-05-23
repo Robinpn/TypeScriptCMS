@@ -2,3 +2,11 @@ main {
   padding-inline: 28px;
   color: #060b14;
 }
+
+.pizza-text-container {
+  padding: 5px;
+}
+
+.pizza-text-container li {
+  list-style: none;
+}
