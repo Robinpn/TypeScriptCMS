@@ -4,8 +4,9 @@ footer {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: end;
+  justify-content: center;
   font-size: 22px;
+  flex-wrap: wrap;
 }
 .career,
 .contact,
@@ -13,7 +14,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 200px;
   color: #eff4fa !important;
   align-items: center;
   gap: 10px;
@@ -37,4 +38,16 @@ footer {
   display: flex;
   flex-direction: row;
   gap: 11px;
+}
+@media only screen and (min-width: 992px) {
+  footer {
+    flex-wrap: nowrap;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .career,
+  .contact,
+  .follow-us {
+    width: 50%;
+  }
 }

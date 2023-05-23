@@ -4,7 +4,6 @@
   margin-bottom: 42px;
 }
 .about-p {
-  padding-inline: 21px;
   font-size: 22px;
 }
 .paragraph-container {
@@ -14,4 +13,9 @@
 }
 .about {
   margin-bottom: 180px;
+}
+@media only screen and (min-width: 992px) {
+  .about-p {
+    padding-inline: 21px;
+  }
 }
