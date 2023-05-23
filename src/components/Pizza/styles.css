@@ -1,12 +1,32 @@
 .pizza-container {
-  width: 100%;
+  max-width: 670px;
   height: fit-content;
-  background-color: red;
+  background-color: #b98538;
   display: flex;
   justify-content: space-between;
+  border-radius: 25px;
 }
 
 .pizza-img {
   height: 200px;
   width: 200px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* Desktop */
+/* @media screen and (min-width: 992px) {
+  .pizza-container {
+    height: fit-content;
+    background-color: #b98538;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+  }
+  .pizza-img {
+    height: 200px;
+    width: 200px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  } */
 }
