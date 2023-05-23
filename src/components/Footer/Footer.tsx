@@ -1,5 +1,7 @@
 import React from 'react';
 import './style.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 type Types = {
   apply: string;
@@ -37,13 +39,13 @@ const Footer = (props: Types): React.ReactElement => {
               className="social-btn"
               onClick={() => openInNewTab(props.facebook)}
             >
-              Button
+              <FontAwesomeIcon className="icons" icon={faFacebook} />
             </button>
             <button
               className="social-btn"
               onClick={() => openInNewTab(props.instagram)}
             >
-              Button
+              <FontAwesomeIcon className="icons" icon={faInstagram} />
             </button>
           </div>
         </div>

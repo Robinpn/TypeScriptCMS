@@ -22,11 +22,21 @@ footer {
 }
 .apply-btn,
 .social-btn {
-  height: fit-content;
-  width: fit-content;
+  /* height: fit-content;
+  width: fit-content; */
   background-color: #d8b47d;
   border-style: none;
   cursor: pointer;
+}
+.social-btn{
+  background-color: transparent;
+  color: #d8b47d;
+  height: 64px;
+  width: 64px;
+}
+.icons {
+  height: 100%;
+  width: 100%;
 }
 .apply-btn {
   height: 40px;
