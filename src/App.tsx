@@ -71,14 +71,18 @@ function App() {
             items={pizzaArr}
             render={(item: any) => (
               <>
-                <p>{item.name}</p>{' '}
-                  {item.ingredientList.map((ingred: any) => {
+              <div className='pizza-text-container'>
+                <h3>{item.name}</h3>
+                <ul>
+                  {item.ingredientList.map((ingred: any, index: number) => {
                     return (
-                      <>
-                        <p>{ingred.name}</p>
-                      </>
+                        <li key={index}>
+                          {ingred.name}
+                        </li>
                     );
                   })}
+                  </ul>
+                  </div>
                    <img
                   className="pizza-img"
                   src={item.image.url}
