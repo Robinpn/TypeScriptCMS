@@ -9,9 +9,11 @@ const Navbar = (props: types): React.ReactElement => {
   return (
     <>
       <nav className="navbar">
-        <a href="#menu">Menu</a>
         <h1>{props.Title}</h1>
+        <div className='nav-links'>
+        <a href="#menu">Menu</a>
         <a href="#footer">Contact</a>
+        </div>
       </nav>
     </>
   );

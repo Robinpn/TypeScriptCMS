@@ -1,17 +1,26 @@
 .navbar {
-  height: 60px;
+  min-height: 60px;
+  width: 100%;
+  background-color: cadetblue;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  align-items: center;
   color: #060b14;
+  padding: 1rem;
 }
-.navbar > h1 {
+
+.nav-links {
+  width: 18.75rem;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links h1 {
   font-size: 48px;
   height: fit-content;
   font-weight: normal;
 }
-.navbar > a {
+.nav-links a {
   height: fit-content;
   align-self: flex-end;
   font-size: 32px;
