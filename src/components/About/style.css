@@ -1,0 +1,17 @@
+.about-h2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 42px;
+}
+.about-p {
+  padding-inline: 21px;
+  font-size: 22px;
+}
+.paragraph-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.about {
+  margin-bottom: 180px;
+}

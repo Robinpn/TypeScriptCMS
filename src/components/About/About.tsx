@@ -6,11 +6,17 @@ type Types = {
 };
 
 const About = (props: Types): React.ReactElement => {
+  let spliced: Array<string> = props.description.split('\n\n');
+
   return (
     <>
-      <section>
-        <h2>About Us</h2>
-        <p>{props.description}</p>
+      <section className='about'>
+        <h2 className="about-h2">About Us</h2>
+        <div className='paragraph-container'>
+          {spliced.map((paragraph: any, i: number) => {
+            return <p className="about-p">{paragraph}</p>;
+          })}
+        </div>
       </section>
     </>
   );
