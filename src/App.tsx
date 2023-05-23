@@ -45,21 +45,14 @@ function App() {
   if (error) {
     return <p>error...</p>;
   }
-  if (data) {
-    console.log(data);
-  }
 
   //fetch pizza array
   const pizzaData: object[] = data.allPizzas;
-  // console.log(pizzaData);
-  // console.log(pizzaData);
 
   //map all pizzas
   const pizzaArr: any = pizzaData.map((pizza: any) => {
     return pizza;
   });
-
-  console.log(pizzaArr);
 
   return (
     <>
