@@ -7,6 +7,10 @@ main {
   padding: 5px;
 }
 
+.pizza-text-container ul {
+  margin-top: 20px;
+}
+
 .pizza-text-container li {
   list-style: none;
 }
