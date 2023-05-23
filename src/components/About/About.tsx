@@ -13,7 +13,7 @@ const About = (props: Types): React.ReactElement => {
       <section className='about'>
         <h2 className="about-h2">About Us</h2>
         <div className='paragraph-container'>
-          {spliced.map((paragraph: any, i: number) => {
+          {spliced.map((paragraph: string, i: number) => {
             return <p className="about-p" key={i}>{paragraph}</p>;
           })}
         </div>
