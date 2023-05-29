@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useQuery } from 'graphql-hooks';
+import { graphql } from '../gql';
+import {GetContentQuery} from '../gql/graphql'
 import './App.css';
 import Hero from './components/Hero/Hero';
 import Navbar from './components/Navbar/Navbar';
@@ -8,7 +10,7 @@ import Pizza from './components/Pizza/Pizza';
 import Footer from './components/Footer/Footer';
 import About from './components/About/About';
 
-const contentQuery: string = `
+const TheContentQuery: string = `
 query {
   hero{
     title
@@ -36,8 +38,41 @@ query {
   }
 }`;
 
+const contentQuery = graphql(`
+  query GetContent {
+    hero {
+      title
+      heroImage {
+        url
+      }
+    }
+    allPizzas {
+      id
+      name
+      ingredientList {
+        name
+      }
+      image {
+        url
+      }
+    }
+    about {
+      description
+    }
+    footer {
+      apply
+      facebook
+      instagram
+    }
+  }
+`);
+
 function App() {
-  const { data, loading, error } = useQuery(contentQuery);
+  const { data, loading, error } = useQuery<GetContentQuery>(TheContentQuery);
+
+  if(!data) {
+    return <p>synd...</p>
+  }
 
   if (loading) {
     return <p>Loading...</p>;
@@ -56,14 +91,14 @@ function App() {
 
   return (
     <>
-      <Navbar Title={data.hero.title} />
+      <Navbar Title={data.hero?.title || ""} />
       <main>
-        <Hero imgUrl={data.hero.heroImage.url} />
+        <Hero imgUrl={data.hero?.heroImage?.url || ""} />
         <Menu>
           {data.allPizzas.map((pizza: any, index: number) => {
             return (
               <Pizza
-              key={index}
+                key={index}
                 name={pizza.name}
                 imageURL={pizza.image.url}
                 ingredientList={pizza.ingredientList}
@@ -71,12 +106,12 @@ function App() {
             );
           })}
         </Menu>
-        <About description={data.about.description} />
+        <About description={data.about?.description || ""} />
       </main>
       <Footer
-        apply={data.footer.apply}
-        facebook={data.footer.facebook}
-        instagram={data.footer.apply}
+        apply={data.footer?.apply || ""}
+        facebook={data.footer?.facebook || ""}
+        instagram={data.footer?.apply || ""}
       />
     </>
   );
