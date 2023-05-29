@@ -60,30 +60,16 @@ function App() {
       <main>
         <Hero imgUrl={data.hero.heroImage.url} />
         <Menu>
-          <Pizza
-            items={pizzaArr}
-            render={(item: any) => (
-              <>
-              <div className='pizza-text-container'>
-                <h3>{item.name}</h3>
-                <ul>
-                  {item.ingredientList.map((ingred: any, index: number) => {
-                    return (
-                        <li key={index}>
-                          {ingred.name}
-                        </li>
-                    );
-                  })}
-                  </ul>
-                  </div>
-                   <img
-                  className="pizza-img"
-                  src={item.image.url}
-                  alt="a fucking pizza"
-                />
-              </>
-            )}
-          />
+          {data.allPizzas.map((pizza: any, index: number) => {
+            return (
+              <Pizza
+              key={index}
+                name={pizza.name}
+                imageURL={pizza.image.url}
+                ingredientList={pizza.ingredientList}
+              />
+            );
+          })}
         </Menu>
         <About description={data.about.description} />
       </main>
