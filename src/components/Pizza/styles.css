@@ -7,11 +7,6 @@
   border-radius: 25px;
   box-shadow: 0px 3px 2px gray;
 }
-@media screen and (min-width: 992px) {
-  .pizza-container {
-    width: 45%;
-  }
-}
 
 .pizza-img {
   height: 200px;
@@ -24,11 +19,24 @@
   padding-left: 15px;
 }
 .pizza-text-container > h3 {
-  font-size: 32px;
+  font-size: 22px;
   font-weight: normal;
 }
 .pizza-text-container > ul {
-  font-size: 22px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 992px) {
+  .pizza-container {
+    width: 45%;
+  }
+  .pizza-text-container > h3 {
+    font-size: 32px;
+    font-weight: normal;
+  }
+  .pizza-text-container > ul {
+    font-size: 22px;
+  }
 }
 /* Desktop */
 /* @media screen and (min-width: 992px) {
