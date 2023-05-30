@@ -1,20 +1,24 @@
 import React from 'react';
 import './styles.css';
 
-type Types = {
+interface ingredient {
+  name: string;
+}
+
+type types = {
   name: string;
   imageURL: string;
-  ingredientList: object[];
+  ingredientList: ingredient[]
 };
 
-const Pizza = (props: Types): React.ReactElement => {
+const Pizza = (props: types): React.ReactElement => {
   return (
     <>
       <div className="pizza-container">
         <div className="pizza-text-container">
           <h3>{props.name}</h3>
           <ul>
-            {props.ingredientList.map((ingredient: any, index: number) => {
+            {props.ingredientList.map((ingredient: ingredient, index: number) => {
               return <li key={index}>{ingredient.name}</li>;
             })}
           </ul>
