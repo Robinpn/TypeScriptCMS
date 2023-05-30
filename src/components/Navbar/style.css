@@ -2,19 +2,20 @@
   min-height: 60px;
   width: 100%;
   background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
   color: #060b14;
   padding: 1rem;
-  gap: 2rem;
 }
 
 .navbar > h1 {
   font-size: 48px;
   height: fit-content;
   font-weight: normal;
+  grid-column: 1 / 3;
+  grid-row: 1;
 }
 .navbar > a {
   height: fit-content;
@@ -23,8 +24,12 @@
   cursor: pointer;
   color: #060b14;
 }
-@media screen and (min-width: 992px){
-  .navbar{
+@media screen and (min-width: 600px) {
+  .navbar {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
 }
