@@ -1,5 +1,6 @@
 .pizza-container {
   width: -webkit-fill-available;
+  max-width: 37.5rem;
   height: fit-content;
   background-color: #b98538;
   display: flex;
@@ -21,16 +22,19 @@
   padding-left: 15px;
 }
 .pizza-text-container > h3 {
+  color: rgb(244, 218, 218);
   font-size: 22px;
   font-weight: normal;
 }
 .pizza-text-container > ul {
   font-size: 16px;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 992px) {
   .pizza-container {
     width: 45%;
+    min-width: 37.5rem;
   }
   .pizza-text-container > h3 {
     font-size: 32px;
