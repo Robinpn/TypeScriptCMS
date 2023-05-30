@@ -26,7 +26,11 @@ footer {
   border-style: none;
   cursor: pointer;
 }
-.social-btn{
+
+.apply-btn:hover {
+  background-color: #f0d9b5;
+}
+.social-btn {
   background-color: transparent;
   color: #d8b47d;
   height: 64px;
