@@ -70,15 +70,15 @@ const contentQuery = graphql(`
 function App() {
   const { data, loading, error } = useQuery<GetContentQuery>(TheContentQuery);
 
-  if(!data) {
-    return <p>synd...</p>
-  }
-
   if (loading) {
-    return <p>Loading...</p>;
+    return <p>The site is loading...</p>;
   }
   if (error) {
-    return <p>error...</p>;
+    return <p>There was a error...</p>;
+  }
+  
+  if(!data) {
+    return <p>something went wrong...</p>
   }
 
   //fetch pizza array
@@ -111,7 +111,7 @@ function App() {
       <Footer
         apply={data.footer?.apply || ""}
         facebook={data.footer?.facebook || ""}
-        instagram={data.footer?.apply || ""}
+        instagram={data.footer?.instagram || ""}
       />
     </>
   );
