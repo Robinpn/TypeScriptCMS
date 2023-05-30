@@ -3,17 +3,6 @@ main {
   color: #060b14;
 }
 
-.pizza-text-container {
-  padding: 5px;
-}
-
-.pizza-text-container ul {
-  margin-top: 20px;
-}
-
-.pizza-text-container li {
-  list-style: none;
-}
 .pizza-section {
   width: 100%;
   height: fit-content;

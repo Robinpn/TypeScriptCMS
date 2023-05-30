@@ -80,7 +80,7 @@ function App() {
     return <p>something went wrong...</p>
   }
 
-  interface ingredient {
+  interface ingredient{
     name: string;
   }
 
@@ -92,6 +92,7 @@ function App() {
     ingredientList: ingredient[];
   }
 
+
   return (
     <>
       <Navbar Title={data.hero?.title || ""} />
@@ -99,6 +100,8 @@ function App() {
         <Hero imgUrl={data.hero?.heroImage?.url || ""} />
         <section id="menu" className="pizza-section">
           {data.allPizzas.map((pizza: pizza, index: number) => {
+            console.log(pizza);
+            
             return (
               <Pizza
                 key={index}
